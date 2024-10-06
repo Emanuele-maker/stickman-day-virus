@@ -18,6 +18,8 @@ bool disableCMD() {
         attrs.bInheritHandle = TRUE;
 
         openedKeyWorked = RegCreateKeyExA(HKEY_CURRENT_USER, sk, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, &attrs, &hKey, doneOperation);
+
+        if (openedKeyWorked != ERROR_SUCCESS) MessageBoxA(NULL, "Creating Registry System key did not work!", "error", 0);
     }
     LPCSTR value = TEXT("DisableCMD");
     BYTE data = 1;
