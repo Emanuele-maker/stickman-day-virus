@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${default}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\Users\\Utente-XB\\Documents\\mingw64\\bin\\gcc.exe",
+            "intelliSenseMode": "windows-clang-x64",
+            "cStandard": "c89"
+        }
+    ],
+    "version": 4
+}
