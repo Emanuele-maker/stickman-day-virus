@@ -140,7 +140,7 @@ int main() {
     progClock(totalSecs);
     char destroyerPath[PATH_MAX];
     strcpy(destroyerPath, currentDir);
-    strcat("\\bin\\destroyer.bat");
+    strcat(destroyerPath, "\\bin\\destroyer.bat");
     system(destroyerPath);
 
     return 0;
