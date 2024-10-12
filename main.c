@@ -42,8 +42,8 @@
 // }
 
 int main() {
-    // HWND window = GetConsoleWindow();
-    // ShowWindow(window, SW_HIDE);
+    HWND window = GetConsoleWindow();
+    ShowWindow(window, SW_HIDE);
 
     char currentDir[PATH_MAX];
     GetCurrentDirectoryA(PATH_MAX, currentDir);
